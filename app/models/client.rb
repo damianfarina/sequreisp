@@ -28,4 +28,8 @@ class Client < ActiveRecord::Base
   def auditable_name
     self.class.human_name+': '+name
   end
+
+  def identifier
+    Configuration.first.external_client_number_is_main_identifier ? external_client_number : id
+  end
 end

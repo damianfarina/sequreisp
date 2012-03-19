@@ -86,7 +86,7 @@
         <% css_class = i%2 == 0 ? "even" : "odd" %>
         <tr class="<%= css_class %>" >
           <td><%= client.name %></td>
-          <td><%=h client.external_client_number %></td>
+          <td><%=h client.identifier %></td>
           <td><%=h client.email %></td>
           <td><%=h "#{client.phone} #{client.phone_mobile}" %></td>
           <%= render :partial => "shared/plugins_table_cells", :locals => {:object => client} %>

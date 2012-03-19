@@ -35,6 +35,9 @@
     <% form.inputs :name => t('fieldsets.configuration.users') do %>
       <%= form.input :logged_in_timeout %> 
     <% end %>
+    <% form.inputs :name => t('fieldsets.configuration.clients') do %>
+      <%= form.input :external_client_number_is_main_identifier %>
+    <% end %>
     <% form.inputs :name => t('fieldsets.configuration.global_prios'),
                    :context_help => { :path => { :custom => 'configuration.fieldsets.global_prios' } } do %>
       <%= form.input :default_tcp_prio_ports %> 
